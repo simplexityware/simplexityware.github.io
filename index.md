@@ -1,7 +1,7 @@
-Hello and welcome to this blog. Edit the `index.md` file to change this content. All pages on the blog, including this one, use [Markdown](https://guides.github.com/features/mastering-markdown/). You can include images:
+Hello and welcome to this blog. 
 
-![Image of fast.ai logo](images/logo.png)
+For now, it will be used to track my progress in learning 
+* [Causal Inferencing](https://www.microsoft.com/en-us/research/group/causal-inference/)
+* [Causal Factor Investing](https://quantresearch.org)
+* [Alphas Research](https://www.worldquant.com/brain/)
 
-## This is a title
-
-And you can include links, like this [link to fast.ai](https://www.fast.ai). Posts will appear after this file. 
