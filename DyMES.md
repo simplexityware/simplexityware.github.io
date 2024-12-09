@@ -104,3 +104,7 @@ DyMES is applied to various domains, demonstrating its interdisciplinary scope a
 
 ### **Conclusion**
 From a complexity and cybernetics perspective, DyMES represents a significant step forward in modeling and understanding systems with **entwined micro-macro dynamics**. By explicitly incorporating **bidirectional feedback**, it provides a robust framework for studying the **emergent, adaptive, and non-equilibrium behaviors** that are hallmarks of complex systems. Its applications to ecology, economics, epidemiology, and thermodynamics exemplify its interdisciplinary relevance, making it a valuable tool for both theoretical exploration and practical problem-solving in cybernetics and beyond.
+
+---
+#### **References**
+https://www.santafe.edu/news-center/news/hybrid-theory-offers-new-way-to-model-disturbed-complex-systems
