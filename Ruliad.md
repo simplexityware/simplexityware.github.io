@@ -45,7 +45,7 @@ Imagine a giant, infinite, and incredibly complex tapestry woven from threads of
 
 **Why is it important for MarS and Machine Learning?**
 
-MarS, with its LMM, is exploring a small part of the Ruliad. It's finding computations (sequences of orders) that correspond to realistic financial market behavior. This aligns with Wolfram's view that machine learning, in general, is about "mining" the Ruliad for computations that achieve desired outcomes.
+[Mars](https://mars-lmm.github.io/), with its LMM, is exploring a small part of the Ruliad. It's finding computations (sequences of orders) that correspond to realistic financial market behavior. This aligns with Wolfram's view that machine learning, in general, is about "mining" the Ruliad for computations that achieve desired outcomes.
 
 **In Conclusion:**
 
