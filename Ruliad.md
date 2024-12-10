@@ -50,3 +50,8 @@ MarS, with its LMM, is exploring a small part of the Ruliad. It's finding comput
 **In Conclusion:**
 
 The Ruliad is a complex and mind-bending concept, but it offers a powerful new way to think about computation, complexity, and the nature of reality itself. It suggests that everything is fundamentally computational and that our universe is just one possibility among an infinite number of others within the vast space of the Ruliad.
+
+**References:**
+*  https://writings.stephenwolfram.com/
+*  https://writings.stephenwolfram.com/2024/08/whats-really-going-on-in-machine-learning-some-minimal-models/
+*  https://writings.stephenwolfram.com/2024/06/ruliology-of-the-forgotten-code-10/
