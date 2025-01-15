@@ -89,5 +89,7 @@ This research project will contribute to the field of autonomous financial syste
 * [QuantAgent: Seeking Holy Grail in Trading by Self-Improving Large Language Model](https://arxiv.org/abs/2402.03755)
 * [Re(Visiting) Large Language Models in Finance](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4963618)
 * [AI-Powered (Finance) Scholarship](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5060022)
+* [Dissecting Contextual Word Embeddings: Architecture and Representation](https://arxiv.org/abs/1808.08949)
+* [Expected Returns and Large Language Models](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4416687)
 
   
