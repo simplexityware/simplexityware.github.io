@@ -1,8 +1,8 @@
-**Research Proposal: Automated Alpha Signal Generation using a Transformer Architecture and the Alpha Creation Environment (ACE)**
+**Research Proposal V2: Automated Alpha Signal Generation using a Dual-Encoder Transformer Architecture and the Alpha Creation Environment (ACE)**
 
 **1. Introduction**
 
-This research proposes a novel approach to automated alpha signal generation for quantitative trading. We aim to develop a system that can automatically discover, evaluate, and refine trading signals (alphas) by leveraging a dual-encoder transformer-based sequence-to-sequence model in conjunction with a comprehensive simulation and execution environment (ACE). This system will address the challenges of manually designing and testing alpha signals by automating and accelerating the discovery process.
+This research proposes a novel approach to automated alpha signal generation for quantitative trading. We aim to develop a system that can automatically discover, evaluate, and refine trading signals (alphas) by leveraging a dual-encoder transformer-based sequence-to-sequence model in conjunction with a comprehensive simulation and execution environment (ACE). Our approach is inspired by the `ModernBERT` project's approach to modularity and scaling, and its use of YAML configurations, and will build on the concepts in this project. This system will address the challenges of manually designing and testing alpha signals by automating and accelerating the discovery process.
 
 **2. Background and Motivation**
 
@@ -10,7 +10,9 @@ This research proposes a novel approach to automated alpha signal generation for
 *   **Need for Automation:** There is a growing need for automated systems that can efficiently explore vast signal spaces, discover novel alphas, and adapt to changing market conditions.
 *   **Transformer Architectures:** Transformer models have demonstrated exceptional performance in sequence-to-sequence tasks. Their ability to capture long-range dependencies and complex relationships makes them well-suited for generating alpha signal expressions.
 *   **Simulation Environments:** Simulation environments, like the ACE, provide the means to realistically evaluate the viability of an alpha signal. These evaluations provide crucial feedback for the training process.
-* **Need to Capture Financial Semantics:** The generated alphas need to capture financial concepts and contexts from a variety of sources in order to be considered viable and useful.
+*   **Need to Capture Financial Semantics:** The generated alphas need to capture financial concepts and contexts from a variety of sources in order to be considered viable and useful.
+*   **Inspiration from `ModernBERT`**: This project is heavily inspired by the `ModernBERT` project, which has an emphasis on modernizing BERT through modularity, flexibility, architectural changes and better implementations of core transformer blocks. We aim to follow their approach, and leverage the core concepts of this project, which has a focus on performance and scalability.
+* **Importance of Code Quality:** The `ModernBERT` project uses a modular `FlexBERT` architecture, which is designed to be easy to customize and modify. Their use of YAML based configs for model building and training will also be leveraged in our project.
 
 **3. Research Objectives**
 
@@ -38,9 +40,9 @@ We will employ the following approach:
 
 1.  **Formalize Alpha Signal Grammar:** Develop a formal grammar defining the syntax of valid alpha signal expressions (as we've already done).
 2.  **Develop Input Representations:** Create an appropriate input format for the transformer encoders, capable of encoding alpha signal metadata, constraints, seed expressions, and also capable of encoding financial documents.
-3.  **Implement Dual-Encoder Architecture:** Implement the architecture using a transformer based on `ModernBERT` for the alpha expression encoder, and the pre-trained FinText model for the financial document encoder.
+3.  **Implement Dual-Encoder Architecture:** Implement the architecture using a custom transformer based on the `ModernBERT` code for the alpha expression encoder, and the pre-trained FinText model for the financial document encoder.
 4.  **Implement Fusion Strategy:** Build a module to combine the outputs of both encoders, testing concatenation, attention-based and a fusion layer to test the different methods.
-5.  **Data Generation from ACE and Financial Documents:** Leverage the ACE to generate a training dataset consisting of a diverse set of alpha signal expressions, along with their corresponding evaluation metrics from simulations, and also obtain various documents from the financial domain.
+5.  **Data Generation from ACE and Financial Documents:** Leverage the ACE to generate a training dataset consisting of a diverse set of alpha signal expressions, along with their corresponding evaluation metrics from simulations, and also obtain various documents from the financial domain using the FinText model for text encoding.
 6.  **Training with Supervised and Reinforcement Learning:**
     *   Pre-train the transformer with a supervised learning approach using labeled data, and then fine tune the model using a reinforcement learning approach, using ACE metrics as rewards and penalties.
 7.  **Iterative Refinement Loop:** Set up an iterative loop where generated alphas are evaluated in the ACE, and this feedback is used to update the transformer model, enabling continuous improvement.
@@ -58,8 +60,8 @@ Our proposed system employs a dual-encoder architecture, followed by a decoder, 
 *   **Financial Document Encoder:**
     *   **Pre-trained Model:** The pre-trained FinText model accessed through the HuggingFace Transformers library.
     *   **Input:** Tokenized financial text documents (e.g., news articles, earnings reports, etc.).
-    *   **Output:** A vector representation of the financial text, containing contextualized embeddings.
-*    **Combination Module**
+    *   **Output:** A contextualized vector representation of the financial text.
+*   **Combination Module**
     *  Combines the vector representation output from the Alpha Expression Encoder, and the Financial Document Encoder.
     *  This is done using a concatenation, cross-attention, or a linear fusion layer.
     *   **Output**: A combined vector representation.
@@ -83,6 +85,7 @@ Our proposed system employs a dual-encoder architecture, followed by a decoder, 
 *   A system that demonstrates improved efficiency in the alpha discovery process compared to manual methods.
 *   A scalable system that can easily integrate new data sources and operators.
 *   A set of well-defined operators, data variables and a grammar that can be used for future research.
+*  Re-implementation of some of the core components of `ModernBERT`, such as rotary positional embeddings, different layer implementations and the ability to easily switch between different attention mechanisms.
 
 **7. Research Timeline and Milestones**
 
@@ -94,7 +97,7 @@ Our proposed system employs a dual-encoder architecture, followed by a decoder, 
     *   Set up data acquisition and preprocessing pipelines.
 *   **Phase 2 (Months 4-6):**
     *   Implement the dual-encoder architecture, including the chosen combination module.
-    *   Implement supervised learning training of the model.
+    *   Implement supervised learning training of the transformer.
     *   Integrate the transformer with the ACE for simulation and evaluation.
 *   **Phase 3 (Months 7-9):**
     *   Implement reinforcement learning training loop using the ACE.
@@ -112,10 +115,11 @@ Our proposed system employs a dual-encoder architecture, followed by a decoder, 
 *   **Overfitting:** There is a risk of overfitting the training data, leading to poor generalization.
 *   **Viability of Alphas:** Not all generated alpha signals will be viable, requiring careful selection criteria and reinforcement learning strategies.
 *   **Integration of Financial Data:** Ensuring a consistent and relevant flow of information from financial text to alpha expressions.
+*   **Performance of FinText:** The FinText model, while showing great promise, needs to be evaluated to determine how it performs in our system, and to understand how best to use it.
 
 **9. Conclusion**
 
-This research will contribute significantly to the field of quantitative finance by developing an automated, efficient, and adaptive approach to alpha signal generation using state-of-the-art machine learning techniques, and using a realistic simulation and execution environment. We believe that this system can empower researchers and practitioners to explore novel signal spaces and develop more effective trading strategies.
+This research will contribute significantly to the field of quantitative finance by developing an automated, efficient, and adaptive approach to alpha signal generation. This will use a custom transformer based on the modular `ModernBERT` architecture, leveraging a pre-trained financial text encoder for contextual understanding and utilize reinforcement learning to train the model on real-world performance. We believe that this system can empower researchers and practitioners to explore novel signal spaces and develop more effective trading strategies. The final system will be highly flexible and will be able to quickly adapt to different datasets, operators, and simulation settings.
 
 **10. Current Definition of Operators and Data Variables**
 ```
